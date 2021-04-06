@@ -1,0 +1,58 @@
+<h1>Dredd Tests</h1>
+<h2>Pass: GET (200) /users</h2>
+<h2>Fail: GET (200) /users/109</h2>
+<h3>Message</h3>
+<pre><code>headers: At '/content-type' No enum match for: &quot;application/json; charset=utf-8&quot;
+body: At '/name' Missing required property: name
+
+</code></pre>
+<h3>Request</h3>
+<pre><code>method: GET
+uri: /users/109
+headers: 
+    User-Agent: Dredd/14.0.0 (Linux 5.4.0-70-generic; x64)
+
+body: 
+
+
+</code></pre>
+<h3>Expected</h3>
+<pre><code>headers: 
+    Content-Type: application/json
+
+body: 
+{
+  &quot;id&quot;: 109,
+  &quot;name&quot;: &quot;foo&quot;
+}
+statusCode: 200
+
+</code></pre>
+<h3>Actual</h3>
+<pre><code>statusCode: 200
+headers: 
+    x-powered-by: Express
+    content-type: application/json; charset=utf-8
+    content-length: 77
+    etag: W/&quot;4d-yMDTCHVS/OojcUF60HIKnm6E+Xw&quot;
+    date: Tue, 06 Apr 2021 08:26:46 GMT
+    connection: close
+
+bodyEncoding: utf-8
+body: 
+{
+  &quot;id&quot;: 1,
+  &quot;first_name&quot;: &quot;Tandi&quot;,
+  &quot;last_name&quot;: &quot;Milsap&quot;,
+  &quot;email&quot;: &quot;tmilsap0@pbs.org&quot;
+}
+
+</code></pre>
+<hr>
+<h1>Summary</h1>
+<p><strong>Tests completed:</strong> 1 passing,
+1 failing,
+0 errors,
+0 skipped,
+2 total.</p>
+<p><strong>Tests took:</strong> 1460ms.</p>

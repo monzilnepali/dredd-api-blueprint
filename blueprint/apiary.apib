@@ -1,0 +1,64 @@
+FORMAT: 1A
+
+# Dredd Test
+
+# Group Users
+user related APIs
+
+## User Collection [/users]
+
+### Fetch All users [GET]
+Fetch All users
++ Response 200(application/json; charset=utf-8)
+
+    + Attributes (array[User])
+
+
+## User [/users/{user_id}]
+
++ Parameters
+    + user_id: 1 (required, number) - user id
+
+### Get user details [GET]
+Get user detail
++ Response 200(application/json; charset=utf-8)
+
+    + Attributes (User)
+
+### Delete user [DELETE]
+Delete user
++ Response 200
+
+### Update User details [PATCH]
+Update user details
+
++ Request Update JSON Message (application/json)
+
+        { 
+        "first_name": "All your base are belong to us.", 
+        "last_name":"lastname",
+        "email":"email@email.com" 
+        }
+
++ Response 200(application/json; charset=utf-8)
+
+    + Body
+
+            {
+                "first_name": "All your base are belong to us.", 
+                "last_name":"lastname",
+                "email":"email@email.com" 
+            }
+
+
+
+
+## Data Structures
+
+### User
++ id: 999 (required, number)
++ first_name: first name (required, string)
++ last_name: last name (required, string)
++ email: email address(required, string)
+
+
