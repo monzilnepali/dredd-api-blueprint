@@ -1,12 +1,11 @@
 {
-  "name": "dredd_API_blueprint",
+  "name": "dredd_api_blueprint",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./src/app.js",
-    "dredd": "dredd"
+    "dredd-test": "dredd --config='./dredd-config.yml'"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +14,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "dredd": "^14.0.0",
     "nodemon": "^2.0.7"
   }
 }
